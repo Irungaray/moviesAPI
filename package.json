@@ -1,0 +1,20 @@
+{
+  "name": "moviesapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": " set DEBUG=app:* && nodemon index",
+    "start": "SET NODE_ENV=production & node index"
+  },
+  "author": "Irungaray",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "express": "^4.17.1",
+    "prettier": "^2.0.5"
+  }
+}
