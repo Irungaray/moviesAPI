@@ -84,6 +84,23 @@ function moviesApi(app) {
       next(err);
     }
   });
+
+  router.patch('/:movieId', async function(req, res, next) {
+    const { movieId } = req.params;
+    const { body: movie } = req;
+    try {
+      const movieModified = await moviesService.updateOneFieldMovie({
+        movieId,
+        movie
+      });
+      res.status(204).json({
+        data: movieModified,
+        message: 'movie modified'
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
 }
 
 module.exports = moviesApi;
