@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const config = { // Añadir .trim()  al final de NODE_ENV
+const config = { // Para testear, quitar .trim()  al final de NODE_ENV
     dev: process.env.NODE_ENV !== 'production',
     port: process.env.PORT || 3000,
 
