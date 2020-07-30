@@ -1,11 +1,13 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-const { config } = require('./config/index.js')
-const moviesApi = require('./routes/movies.js')
+const { config } = require('./config/index.js');
+const moviesApi = require('./routes/movies.js');
 
-moviesApi(app)
+app.use(express.json());
+
+moviesApi(app);
 
 app.listen(config.port, function() {
-    console.log(`Listening http://localhost:${config.port}`)
+    console.log(`Servidor corriendo en http://localhost:${config.port}`);
 })
