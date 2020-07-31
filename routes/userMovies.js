@@ -10,7 +10,7 @@ const userMoviesService = require('../services/userMovies');
 
 function userMoviesApi(app) {
     const router = express.Router();
-    app.user('/api/user-movies', router);
+    app.use('/api/user-movies', router);
 
     const UserMoviesService = new UserMoviesService();
 
