@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [{ "src": "index.js", "use": "@now/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+    "env": {
+        "DB_USER": "@irungahub_db-user",
+        "DB_PASSWORD": "@irungahub_db-paswword",
+        "DB_HOST": "@irungahub_db-host",
+        "DB_NAME": "@irungahub_db-name"
+    }
+}
