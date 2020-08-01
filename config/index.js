@@ -13,6 +13,10 @@ const config = { // Para testear, quitar .trim()  al final de NODE_ENV
     dbHost: process.env.DB_HOST,
     dbName: process.env.DB_NAME,
 
+    // AUTH
+    authJwtSecret =process.env.AUTH_JWT_SECRET,
+
+
     // USERS
     defaultAdminPassword: process.env.DEFAULT_ADMIN_PASSWORD,
     defaultUserPassword: process.env.DEFAULT_USER_PASSWORD,
