@@ -14,7 +14,7 @@ const config = { // Para testear, quitar .trim()  al final de NODE_ENV
     dbName: process.env.DB_NAME,
 
     // AUTH
-    authJwtSecret =process.env.AUTH_JWT_SECRET,
+    authJwtSecret: process.env.AUTH_JWT_SECRET,
 
 
     // USERS
