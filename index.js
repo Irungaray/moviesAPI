@@ -7,6 +7,7 @@ const moviesApi = require('./routes/movies.js');
 
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 const { logErrors, wrapErrors, errorHandler } = require('./utils/middleware/errorHandlers');
+const helmet = require('helmet');
 
 app.use(express.json());
 
@@ -22,6 +23,9 @@ app.use(notFoundHandler);
 app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
+
+// Helmet
+app.use(helmet());
 
 app.listen(config.port, function() {
     console.log(`Servidor corriendo en http://localhost:${config.port}`);
