@@ -21,7 +21,7 @@ describe("services - movies", function() {
         it("should return an array of movies", async function() {
             const result = await moviesService.getMovies({ });
             const expected = moviesMock;
-            assert.deepEqual(result, expected);
+            assert.deepStrictEqual(result, expected);
         })
     });
 })
